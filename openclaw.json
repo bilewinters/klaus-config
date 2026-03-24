@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.22",
-    "lastTouchedAt": "2026-03-24T11:38:53.591Z"
+    "lastTouchedAt": "2026-03-24T16:24:02.355Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-23T16:43:58.386Z",
@@ -142,6 +142,12 @@
     "port": 18789,
     "mode": "local",
     "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ]
+    },
     "auth": {
       "mode": "token",
       "token": "REDACTED"
