@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.22",
+    "lastTouchedAt": "2026-03-24T11:38:53.591Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-23T16:43:58.386Z",
+    "lastRunVersion": "2026.3.22",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      }
+    }
+  },
+  "acp": {
+    "enabled": true,
+    "dispatch": {
+      "enabled": true
+    },
+    "backend": "acpx",
+    "defaultAgent": "claude",
+    "allowedAgents": [
+      "claude",
+      "codex",
+      "gemini",
+      "opencode"
+    ],
+    "maxConcurrentSessions": 4,
+    "stream": {
+      "coalesceIdleMs": 300,
+      "maxChunkChars": 1200
+    },
+    "runtime": {
+      "ttlMinutes": 120
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6"
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "anthropic/claude-opus-4-6": {
+          "params": {
+            "cacheRetention": "short"
+          }
+        },
+        "anthropic/claude-haiku-3-5": {
+          "params": {
+            "cacheRetention": "short"
+          }
+        }
+      },
+      "workspace": "/Users/paul/.openclaw/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "memoryFlush": {
+          "enabled": true
+        }
+      },
+      "heartbeat": {
+        "every": "1h",
+        "model": "anthropic/claude-haiku-3-5"
+      },
+      "sandbox": {
+        "mode": "off",
+        "workspaceAccess": "rw",
+        "scope": "session"
+      }
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "resetByChannel": {
+      "telegram": {
+        "mode": "idle",
+        "idleMinutes": 525600
+      }
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "REDACTED",
+      "groups": {
+        "*": {
+          "requireMention": true
+        },
+        "-1003804429449": {
+          "requireMention": false
+        }
+      },
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "REDACTED"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "plugins": {
+    "allow": [
+      "lossless-claw"
+    ],
+    "entries": {
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "REDACTED"
+          }
+        }
+      },
+      "lossless-claw": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "lossless-claw": {
+        "source": "npm",
+        "spec": "@martian-engineering/lossless-claw",
+        "installPath": "/Users/paul/.openclaw/extensions/lossless-claw",
+        "version": "0.5.1",
+        "resolvedName": "@martian-engineering/lossless-claw",
+        "resolvedVersion": "0.5.1",
+        "resolvedSpec": "@martian-engineering/lossless-claw@0.5.1",
+        "integrity": "sha512-6ICodBdjFkszyw+rzjCugR6liafP+FKqept+WufEfoLQa/+ULZIEmZNHZ0OwZu7zlMrXVGUIhcA6XMdkwESYFw==",
+        "shasum": "2d2e24e40960bf9059bf0555f3afba1343fe2a3d",
+        "resolvedAt": "2026-03-24T11:31:19.641Z",
+        "installedAt": "2026-03-24T11:31:39.007Z"
+      }
+    }
+  }
+}
