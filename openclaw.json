@@ -165,8 +165,7 @@
   "plugins": {
     "allow": [
       "lossless-claw",
-      "telegram",
-      "acpx"
+      "telegram"
     ],
     "entries": {
       "brave": {
