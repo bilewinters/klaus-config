@@ -211,32 +211,5 @@
         "installedAt": "2026-03-24T11:31:39.007Z"
       }
     }
-  },
-  "models": {
-    "providers": {
-      "vllm": {
-        "baseUrl": "http://127.0.0.1:8080/v1",
-        "apiKey": "local",
-        "api": "openai-completions",
-        "models": [
-          {
-            "id": "mlx-community/Qwen2.5-14B-Instruct-4bit",
-            "name": "Qwen2.5 14B (MLX local)",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
-            "contextWindow": 32768,
-            "maxTokens": 32768,
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            }
-          }
-        ]
-      }
-    }
   }
 }
