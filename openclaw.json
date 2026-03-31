@@ -89,6 +89,14 @@
       }
     }
   },
+  "models": {
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://127.0.0.1:11434",
+        "models": []
+      }
+    }
+  },
   "tools": {
     "profile": "coding",
     "web": {
