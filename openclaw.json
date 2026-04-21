@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-04-21T15:05:37.042Z"
+    "lastTouchedAt": "2026-04-21T17:40:24.262Z"
   },
   "env": {},
   "wizard": {
@@ -23,6 +23,10 @@
       "openai-codex:phmccabe@googlemail.com": {
         "provider": "openai-codex",
         "mode": "oauth"
+      },
+      "google:default": {
+        "provider": "google",
+        "mode": "api_key"
       }
     }
   },
@@ -59,7 +63,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.4"
+        "primary": "google/gemini-3.1-pro-preview"
       },
       "models": {
         "anthropic/claude-sonnet-4-6": {
