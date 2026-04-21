@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-04-21T14:50:58.929Z"
+    "lastTouchedAt": "2026-04-21T15:05:37.042Z"
   },
   "env": {},
   "wizard": {
@@ -59,7 +59,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "github-copilot/gpt-4o"
+        "primary": "openai-codex/gpt-5.4"
       },
       "models": {
         "anthropic/claude-sonnet-4-6": {
