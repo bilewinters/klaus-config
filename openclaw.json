@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.24",
-    "lastTouchedAt": "2026-04-21T14:12:56.723Z"
+    "lastTouchedAt": "2026-04-21T14:50:58.929Z"
   },
   "env": {},
   "wizard": {
@@ -59,7 +59,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.4"
+        "primary": "github-copilot/gpt-4o"
       },
       "models": {
         "anthropic/claude-sonnet-4-6": {
@@ -73,7 +73,8 @@
           }
         },
         "github-copilot/claude-sonnet-4.6": {},
-        "openai-codex/gpt-5.4": {}
+        "openai-codex/gpt-5.4": {},
+        "github-copilot/gpt-4o": {}
       },
       "workspace": "/Users/paul/.openclaw/workspace",
       "contextPruning": {
